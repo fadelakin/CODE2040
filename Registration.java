@@ -30,10 +30,6 @@ public class Registration {
 			os.write(input.getBytes());
 			os.flush();
 
-			/*if(conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
-				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
-			}*/
-
 			br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
 
 			String output;
