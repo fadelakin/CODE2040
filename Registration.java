@@ -6,12 +6,19 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Registration {
+public class Registration {	
 
-	public static void main(String args[]) {
+	public static void main(String args[]) {	
+
+		HttpURLConnection conn;
+		OutputStream os;
+		BufferedReader br;
+
 		try {
+
 			URL url = new URL("http://challenge.code2040.org/api/register");
-			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+			
+			conn = (HttpURLConnection) url.openConnection();
 			conn.setDoOutput(true);
 			conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type", "application/json");
@@ -19,7 +26,7 @@ public class Registration {
 			String input = "{\"email\":\"temidayoadelakin@gmail.com\",\"github\":\"https://github.com/fadelakin/CODE2040\"}";
 			System.out.println(input);
 
-			OutputStream os = conn.getOutputStream();
+			os = conn.getOutputStream();
 			os.write(input.getBytes());
 			os.flush();
 
@@ -27,7 +34,7 @@ public class Registration {
 				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
 			}*/
 
-			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
+			br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
 
 			String output;
 			System.out.println("Output from server.... \n");
