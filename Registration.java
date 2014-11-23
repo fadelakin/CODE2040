@@ -23,9 +23,9 @@ public class Registration {
 			os.write(input.getBytes());
 			os.flush();
 
-			if(conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
+			/*if(conn.getResponseCode() != HttpURLConnection.HTTP_CREATED) {
 				throw new RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
-			}
+			}*/
 
 			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
 
