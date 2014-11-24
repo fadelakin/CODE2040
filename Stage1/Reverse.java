@@ -48,6 +48,12 @@ public class Reverse {
 				String validate = "{\"token\":\"sNbVpHJVKL\",\"string\":\"" + reversed + "\"}";
 				System.out.println(validate);
 
+				// I know this is essentially me repeating myself to be able to validate my string
+				// I also know that I should adhere to the DRY principle but
+				// this is just to make sure that things work.
+				// 
+				// TODO: Refactor this because I'm essentially repeating myself which is not good. 
+
 				URL validateURL = new URL("http://challenge.code2040.org/api/validatestring");
 
 				conntwo = (HttpURLConnection) validateURL.openConnection();
