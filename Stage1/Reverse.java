@@ -41,6 +41,8 @@ public class Reverse {
 			while((output = br.readLine()) != null) {
 				System.out.println(output);
 
+				// reverse string given and cut out the unneeded crap
+				// basically just focus on the string, not the json itself.
 				String sub = output.substring(11, 16);
 				System.out.println(sub);
 
