@@ -23,6 +23,8 @@ public class Reverse {
 
 		try {
 
+			// connect to the the server to get the string
+
 			URL url = new URL("http://challenge.code2040.org/api/getstring");
 			
 			conn = (HttpURLConnection) url.openConnection();
@@ -41,7 +43,7 @@ public class Reverse {
 			while((output = br.readLine()) != null) {
 				System.out.println(output);
 
-				// reverse string given and cut out the unneeded crap
+				// reverse given string and cut out the unneeded crap
 				// basically just focus on the string, not the json itself.
 				String sub = output.substring(11, 16);
 				System.out.println(sub);
@@ -55,6 +57,8 @@ public class Reverse {
 				// this is just to make sure that things work.
 				// 
 				// TODO: Refactor this because I'm essentially repeating myself which is not good. 
+				// 
+				// connect to the server to validate the string
 
 				URL validateURL = new URL("http://challenge.code2040.org/api/validatestring");
 
