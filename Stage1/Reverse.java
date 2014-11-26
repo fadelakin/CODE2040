@@ -57,6 +57,7 @@ public class Reverse {
 				// this is just to make sure that things work.
 				// 
 				// TODO: Refactor this because I'm essentially repeating myself which is not good. 
+				//  	 Look at Needle.java in Stage 2 for how I should refactor.
 				// 
 				// connect to the server to validate the string
 
